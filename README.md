@@ -1,6 +1,4 @@
-#Comic
 
-```markdown
 # Delimma - Interactive Comic
 
 Delimma is an interactive comic that immerses readers in a story full of choices. Follow the protagonist as they navigate through life-altering decisions, with the outcomes determined by your selections.
@@ -57,5 +55,5 @@ Delimma is an interactive comic that immerses readers in a story full of choices
 
 This project is licensed under the MIT License. Feel free to fork, modify, and contribute.
 
-```
+
 
