@@ -492,6 +492,31 @@ p {
     background-color: #444; /* Line color */
    
 }
+.timer-video {
+    position: absolute; /* Positioning relative to the nearest positioned ancestor */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+@media (max-width: 768px) {
+    .timer-video {
+        width: 100px; /* Smaller width on small screens */
+        bottom: 10px; /* Adjust position for small screens */
+        right: 10px; /* Adjust position for small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .timer-video {
+        width: 80px; /* Even smaller width on extra small screens */
+        bottom: 5px; /* Further adjust position */
+        right: 5px; /* Further adjust position */
+    }
+}
 
 main {
     max-width: 800px;
