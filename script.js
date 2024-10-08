@@ -113,7 +113,7 @@ function updateComicPage() {
         choiceTimeout = setTimeout(() => {
             currentPage = 9; // Default to timeout path (Panel_4c.png)
             updateComicPage();
-        }, 15000); // 15 seconds to choose
+        }, 17000); // 15 seconds to choose
     } else if (currentPage === 5 || currentPage === 8 || currentPage === 10) {
         // On the last comic page of each path, show Begin and End buttons
         choiceContainer.style.display = 'inline-block';
