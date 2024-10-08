@@ -632,11 +632,7 @@ main {
    
     
 }
-@media (max-width: 768px) {
-    #timerVideo {
-        display: none !important;
-    }
-}
+
 
 
 #choice-container {
@@ -739,21 +735,7 @@ main {
 .start-button:hover {
     background-color: red;
 }
-/* Timer Video Styles */
-#timerVideo {
-    display: none !important;
-}
 
-.timer-video {
-    position: absolute; /* Positioning relative to the nearest positioned ancestor */
-    bottom: 20px; /* Distance from the bottom of the screen */
-    right: 20px; /* Distance from the right of the screen */
-    width: 150px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Shadow for better visibility */
-    z-index: 1000; /* Ensure it appears above other content */
-}
 .background-video {
     position: fixed; /* Fixed position to keep it in place */
     top: 0;
