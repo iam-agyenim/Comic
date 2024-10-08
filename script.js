@@ -49,6 +49,7 @@ function resetAll() {
     gameOverAudio.currentTime = 0;
     doorBreakAudio.pause();
     doorBreakAudio.currentTime = 0;
+   
 }
 
 // Function to play panel audio
@@ -97,7 +98,7 @@ function updateComicPage() {
         choiceTimeout = setTimeout(() => {
             currentPage = 9;
             updateComicPage();
-        }, 15000);
+        }, 6000);
     } else if (currentPage === 5 || currentPage === 8 || currentPage === 10) {
         choiceContainer.style.display = 'inline-block';
         beginButton.style.display = 'inline-block';
