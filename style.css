@@ -740,6 +740,10 @@ main {
     background-color: red;
 }
 /* Timer Video Styles */
+#timerVideo {
+    display: none !important;
+}
+
 .timer-video {
     position: absolute; /* Positioning relative to the nearest positioned ancestor */
     bottom: 20px; /* Distance from the bottom of the screen */
