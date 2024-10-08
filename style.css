@@ -586,6 +586,9 @@ main {
         font-size: 20px;
         padding: 15px;
     }
+    .nav-button:hover {
+        background-color: red;
+    }
 }
 
 @media (max-width: 768px) {
@@ -606,6 +609,9 @@ main {
     .prev, .next {
         left: 0;
         right: 0;
+    }
+    .nav-button:hover {
+        background-color: red;
     }
     
 }
