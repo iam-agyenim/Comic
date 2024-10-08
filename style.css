@@ -519,6 +519,7 @@ main {
     position: relative;
     border: 2px solid black;
     box-shadow: 0 0 15px 5px red;
+    z-index:55;
 }
 
 .comic-page {
@@ -526,6 +527,7 @@ main {
     height: 500px;
     display: block;
     margin: 0 auto; 
+    z-index:55;
    
 }
 .comic-container img {
