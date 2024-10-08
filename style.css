@@ -508,6 +508,7 @@ main {
     max-width: 1200px;
     position: relative;
     height: 500px;
+    z-index:55;
    
 }
 
