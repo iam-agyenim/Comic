@@ -86,6 +86,7 @@ function onEndButtonClick() {
     updateComicPage(); // Update the comic page
 }
 
+// Function to update comic page
 function updateComicPage() {
     comicImage.src = comicPages[currentPage]; // Change the comic image
     choiceContainer.style.display = 'none';  // Hide choices by default
@@ -101,7 +102,7 @@ function updateComicPage() {
         choiceContainer.style.display = 'block'; // Show choice buttons
         choiceAButton.style.display = 'inline-block';
         choiceBButton.style.display = 'inline-block';
-        timerVideo.style.display = 'block'; // Show timer video
+        timerVideo.style.display = 'none'; // Show timer video
         timerVideo.play(); // Play the timer video from the beginning
 
         // Play sound on the choice page
@@ -113,7 +114,7 @@ function updateComicPage() {
         choiceTimeout = setTimeout(() => {
             currentPage = 9; // Default to timeout path (Panel_4c.png)
             updateComicPage();
-        }, 17000); // 15 seconds to choose
+        }, 15000); // 15 seconds to choose
     } else if (currentPage === 5 || currentPage === 8 || currentPage === 10) {
         // On the last comic page of each path, show Begin and End buttons
         choiceContainer.style.display = 'inline-block';
@@ -200,6 +201,7 @@ choiceAButton.addEventListener('click', () => {
     clearTimeout(choiceTimeout); // Clear timeout for choices
     currentPage = 3; // Navigate to path A (Panel_4a.png)
     updateComicPage(); // Refresh the comic display
+
 });
 
 choiceBButton.addEventListener('click', () => {
@@ -210,3 +212,4 @@ choiceBButton.addEventListener('click', () => {
 
 // Initialize the comic display on load
 updateComicPage();
+
