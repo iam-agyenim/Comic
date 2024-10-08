@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/displayC.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Comic Display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Stylesheet -->
+    
+    <!-- Font Awesome for Icons -->
+    
+    
+
+<link rel="stylesheet" href="./Comic Display_files/style.css"><link rel="stylesheet" href="./Comic Display_files/all.min.css"><link href="./Comic Display_files/tailwind.min.css" rel="stylesheet"></head>
+<body style="background-color: black;margin: 0px; overflow: hidden;"> 
+    <!-- Navigation Bar -->
+    <video class="background-video" autoplay="" muted="" loop="">
+        <source src="80s-retro-futuristic-sci-fi-seamless-loop-retrowave-vj-videogame-landscape-neo-SBV-338247269-preview.mp4" type="video/mp4"> <!-- Replace with your video file -->
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <nav class="menu">
+        <div class="logo"><img src="./Comic Display_files/Screenshot 2024-10-08 at 11.55.12 AM.png" style="height: 50px; width:200px; position: relative;"></div><!--Logo-->
+        <ul class="nav-links">
+            <li><a style="font-size: xx-large;" href="http://127.0.0.1:5500/index.html"><i class="fas fa-home"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Start Page Section -->
+    <div id="start-page" class="start-page" style="display: none;">
+        <img src="./Comic Display_files/Cover page.JPG" alt="Comic Cover" class="comic-cover"> <!-- Comic cover image -->
+        <button id="start-btn" class="start-button">Start</button> <!-- Start button -->
+    </div>
+
+    <!-- Comic Display Section -->
+    <main id="comic-section" style="display: block;"> <!-- Initially hidden -->
+        <div class="comics-container">
+            <button id="prev-btn" class="nav-button prev" style="display: inline-block;">&lt;</button>
+    
+            <div class="comic-display">
+                <img src="./Comic Display_files/Panel_4c.png" alt="Comic Page" class="comic-page" id="comicImage">
+            </div>
+    
+            <!-- Choice buttons -->
+            <div id="choice-container" style="display: none;">
+                <button id="choiceA-btn" class="choice-button" style="display: inline-block;">Mom</button>
+                <button id="choiceB-btn" class="choice-button" style="display: inline-block;">Girlfriend</button>
+                <button id="begin-btn" class="choice-button" style="display: none;">Begin</button>
+                <button id="end-btn" class="choice-button" style="display: none;">End</button> <!-- New End button -->
+            </div>
+    
+            <button id="next-btn" class="nav-button next " style="display: inline-block;">&gt;</button>
+            <video id="timerVideo" class="timer-video " autoplay="" muted="" loop="" style="display: none;">
+                <source src="countdown-10-second-horror-movie-film-halloween-scary-timer-animation-backgrou-SBV-349238831-preview.mp4" type="video/mp4"> <!-- Replace with your timer video file -->
+                Your browser does not support the video tag.
+            </video>
+
+            <audio id="choiceAudio" preload="auto">
+                <source src="11l-heartbeat-13945788_G7Ekq9hw.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+             
+            <!-- Game Over Audio -->
+            <audio id="gameOverAudio" preload="auto">
+                <source src="deep-voice-game-over-SBA-300055796-preview-[AudioTrimmer.com].mp3" type="audio/mpeg"> <!-- Replace with your Game Over sound file -->
+                Your browser does not support the audio element.
+            </audio>
+            <!-- Panel Audio for Pane 1,2 , 4a-->
+            <audio id="panelAudio" preload="auto" loop="">
+                <source src="comic5-25269.mp3" type="audio/mpeg"> <!-- Replace with your Panel audio file -->
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="doorBreakAudio" preload="auto">
+                <source src="wood-break-40011-[AudioTrimmer.com].mp3" type="audio/mpeg"> <!-- Replace with your door break sound file -->
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="cartoonSlapAudio" preload="auto">
+                <source src="cartoon-slap-sound.mp3" type="audio/mpeg"> <!-- Replace with your cartoon slap sound file -->
+                Your browser does not support the audio element.
+            </audio>
+            
+        </div>
+    </main>
+   
+
+    <!-- JavaScript -->
+    <script src="./Comic Display_files/script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
