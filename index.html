@@ -1,80 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta charset defines the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Meta viewport makes the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage, which will appear in the browser tab -->
     <title>Comics</title>
+    <!-- Link to the external stylesheet "style.css" -->
     <link href="style.css" rel="stylesheet">
+    <!-- Link to Google Fonts to use the Roboto font in the webpage -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--This is the menu bar-->
+    <!-- Navigation bar (menu) section -->
     <nav class="menu">
+        <!-- Logo image of the site -->
         <div class="logo1"><img src="Delimma.png" style="height: 50px; width:200px; position: relative;"></div><!--Logo-->
+        <!-- Navigation links in the menu bar -->
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="displayC.html" target="_blank">Comic</a></li>
-            <li><a href="#authors">Authors</a></li>
-            <li><a href="#engage">Inspiration</a></li>
-          
+            <li><a href="#about">About</a></li> <!-- Link to the About section -->
+            <li><a href="displayC.html" target="_blank">Comic</a></li> <!-- Link to the Comic page -->
+            <li><a href="#authors">Authors</a></li> <!-- Link to the Authors section -->
+            <li><a href="#engage">Inspiration</a></li> <!-- Link to the Inspiration section -->
         </ul>
-       
     </nav>
 
+    <!-- Empty container div, possibly for future content or styling -->
     <div class="contain"></div>
+
+    <!-- Horizontal line used as a visual separator -->
     <hr class="separator">
+
+    <!-- About section where the comic is described -->
     <div class="about-section" id="about">
         <div class="about-text">
-            <h2>The Dilemma</h2>
-            <p>The Dilemma is a tragic interactive comic that follows the story of a university student who is torn over balancing academics, personal time, and relationships. In this light hearted and humorous comic, users are given the interactive power to determine the fate of the main character through difficult choices between unfortunate situations.</p>
+            <h2>The Dilemma</h2> <!-- Title of the comic -->
+            <!-- Description of the comic -->
+            <p>The Dilemma is a tragic interactive comic that follows the story of a university student who is torn over balancing academics, personal time, and relationships. In this light-hearted and humorous comic, users are given the interactive power to determine the fate of the main character through difficult choices between unfortunate situations.</p>
+            <!-- Button to read the comic that links to displayC.html -->
             <a href="displayC.html" class="comics-button">Read Comics</a>
         </div>
+        <!-- Image related to the comic -->
         <div class="about-image">
             <img src="zits.avif" alt="Comics" />
         </div>
     </div>
+
+    <!-- Horizontal line separator -->
     <hr class="separator">
+
+    <!-- Section showcasing the authors of the comic -->
     <div class="authors-section" id="authors">
-        <h2 class="authors1-header">Authors</h2>
+        <h2 class="authors1-header">Authors</h2> <!-- Title of the section -->
+        
+        <!-- First author information -->
         <div class="author">
             <div class="author-image">
                 <img src="liz.png" alt="Author 1">
             </div>
-            <h3>Liz</h3>
-            <p>Team Leader.</p>
+            <h3>Liz</h3> <!-- Name of the first author -->
+            <p>Team Leader.</p> <!-- Role of the first author -->
         </div>
+        
+        <!-- Second author information -->
         <div class="author">
             <div class="author-image">
                 <img src="Richmond.png" alt="Author 2">
             </div>
-            <h3>Richmond</h3>
-            <p>Team Member</p>
+            <h3>Richmond</h3> <!-- Name of the second author -->
+            <p>Team Member</p> <!-- Role of the second author -->
         </div>
+        
+        <!-- Third author information -->
         <div class="author">
             <div class="author-image">
                 <img src="Ian.png" alt="Author 3">
             </div>
-            <h3>Ian</h3>
-            <p>Team Member</p>
+            <h3>Ian</h3> <!-- Name of the third author -->
+            <p>Team Member</p> <!-- Role of the third author -->
         </div>
+        
+        <!-- Fourth author information -->
         <div class="author">
             <div class="author-image">
                 <img src="David.png" alt="Author 4">
             </div>
-            <h3>David</h3>
-            <p>Team Member</p>
+            <h3>David</h3> <!-- Name of the fourth author -->
+            <p>Team Member</p> <!-- Role of the fourth author -->
         </div>
     </div>
+
+    <!-- Horizontal line separator -->
     <hr class="separator">
+
+    <!-- Call to action (CTA) section related to Inspiration -->
     <div class="cta-section" id="engage">
-        <h2 class="cta2-header">Inspiration</h2>
+        <h2 class="cta2-header">Inspiration</h2> <!-- Title of the section -->
+        
+        <!-- Images related to inspiration -->
         <div class="cta-images">
-            <img src="insp.JPG" alt="Comic Image 1">
-            <img src="insp1.JPG" alt="Comic Image 2">
+            <img src="insp.JPG" alt="Comic Image 1"> <!-- First image -->
+            <img src="insp1.JPG" alt="Comic Image 2"> <!-- Second image -->
         </div>
+        
+        <!-- Text and links related to the comics' inspiration -->
         <div class="cta-text">
-            <h2>Find Different Comics Today</h2>
-            <p>Experience the stories across digital platforms. New comics dropping all the time! Check Out!</p>
+            <h2>Find Different Comics Today</h2> <!-- CTA headline -->
+            <p>Experience the stories across digital platforms. New comics dropping all the time! Check Out!</p> <!-- CTA description -->
+            <!-- Various buttons that link to external social media and comic-related websites -->
             <a target="_blank" href="https://discord.com/invite/comicbooks" class="cta-button">Follow up on Discord</a>
             <a target="_blank" href="https://www.instagram.com/comicboom_ve/profilecard/?igsh=dGpqYTJxaTQ5MHFu" class="cta-button">Follow up on Instagram</a>
             <a target="_blank" href="https://m.webtoons.com/en/" class="cta-button">Follow up on Web</a>
@@ -82,9 +116,7 @@
         </div>
     </div>
 
- 
-
-
+    <!-- JavaScript file linked for interactivity on the webpage -->
     <script src="script.js"></script>
 </body>
 </html>
