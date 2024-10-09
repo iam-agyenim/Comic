@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta charset defines the character encoding for the document -->
     <meta charset="UTF-8">
+    <!-- Title of the webpage -->
     <title>Comic Display</title>
+    <!-- Meta viewport makes the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS Stylesheet -->
+    
+    <!-- Link to external CSS stylesheet "style.css" -->
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for Icons -->
+    <!-- Link to Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to Tailwind CSS for additional utility-based styling -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
 </head>
-<body style="background-image:url('backg.JPG');background-size: cover; margin: 0px; overflow: hidden;" > 
-    <!-- Navigation Bar -->
-   
-    <div class="overlay"></div>
+
+<!-- Background image setup and styling of the body -->
+<body style="background-image:url('backg.JPG');background-size: cover; margin: 0px; overflow: hidden;">
+
+    <!-- Navigation bar -->
+    <div class="overlay"></div> <!-- Overlay for effects -->
     <nav class="menu">
+        <!-- Logo of the website -->
         <div class="logo"><img src="Delimma.png" style="height: 50px; width:200px; position: relative;"></div><!--Logo-->
+        
+        <!-- Navigation links -->
         <ul class="nav-links">
-            <li><a style="font-size: xx-large;" href="index.html"><i class="fas fa-home"></i></a></li>
+            <li><a style="font-size: xx-large;" href="index.html"><i class="fas fa-home"></i></a></li> <!-- Home icon link -->
         </ul>
+        <!-- Hamburger icon for mobile menu -->
         <div class="hamburger">
             <i class="fas fa-bars"></i>
         </div>
     </nav>
 
-    <!-- Start Page Section -->
+    <!-- Start page section displaying comic cover and start button -->
     <div id="start-page" class="start-page">
-        <img src="Cover page.JPG" alt="Comic Cover" class="comic-cover"> <!-- Comic cover image -->
-        <button id="start-btn" class="start-button">Start</button> <!-- Start button -->
+        <!-- Comic cover image -->
+        <img src="Cover page.JPG" alt="Comic Cover" class="comic-cover">
+        <!-- Button to start the comic -->
+        <button id="start-btn" class="start-button">Start</button>
     </div>
 
-    <!-- Comic Display Section -->
-    <main id="comic-section" style="display: none;"> <!-- Initially hidden -->
+    <!-- Comic display section, initially hidden -->
+    <main id="comic-section" style="display: none;">
         <div class="comics-container">
+            <!-- Navigation button to go to the previous comic page -->
             <button id="prev-btn" class="nav-button prev">&lt;</button>
     
+            <!-- Displaying the current comic page -->
             <div class="comic-display">
-                <img src="p4.avif" alt="Comic Page" class="comic-page" id="comicImage">
+                <img src="p4.avif" alt="Comic Page" class="comic-page" id="comicImage"> <!-- Comic image -->
             </div>
     
-            <!-- Choice buttons -->
+            <!-- Choice container for interactive options, initially hidden -->
             <div id="choice-container" style="display: none;">
-                <button id="choiceA-btn" class="choice-button">Mom</button>
-                <button id="choiceB-btn" class="choice-button">Girlfriend</button>
-                <button id="begin-btn" class="choice-button" style="display: none;">Beginning</button>
-                <button id="end-btn" class="choice-button" style="display: none;">Quit</button> <!-- New End button -->
+                <button id="choiceA-btn" class="choice-button">Mom</button> <!-- First choice -->
+                <button id="choiceB-btn" class="choice-button">Girlfriend</button> <!-- Second choice -->
+                <button id="begin-btn" class="choice-button" style="display: none;">Beginning</button> <!-- Begin option -->
+                <button id="end-btn" class="choice-button" style="display: none;">Quit</button> <!-- Quit option -->
             </div>
     
+            <!-- Navigation button to go to the next comic page -->
             <button id="next-btn" class="nav-button next">&gt;</button>
-           
-
+    
+            <!-- Audio element for heartbeat sound, which will play at certain times -->
             <audio id="choiceAudio" preload="auto">
-                <source src="11l-heartbeat-13945788_G7Ekq9hw.mp3" type="audio/mpeg">
+                <source src="11l-heartbeat-13945788_G7Ekq9hw.mp3" type="audio/mpeg"> <!-- Heartbeat sound file -->
                 Your browser does not support the audio element.
             </audio>
-             
-            <!-- Game Over Audio -->
+
+            <!-- Audio element for game over sound -->
             <audio id="gameOverAudio" preload="auto">
-                <source src="deep-voice-game-over-SBA-300055796-preview-[AudioTrimmer.com].mp3" type="audio/mpeg"> <!-- Replace with your Game Over sound file -->
+                <source src="deep-voice-game-over-SBA-300055796-preview-[AudioTrimmer.com].mp3" type="audio/mpeg"> <!-- Game over sound file -->
                 Your browser does not support the audio element.
             </audio>
-            <!-- Panel Audio for Pane 1,2 , 4a-->
+
+            <!-- Audio element for panel sound effects -->
             <audio id="panelAudio" preload="auto">
-                <source src="comic5-25269.mp3" type="audio/mpeg"> <!-- Replace with your Panel audio file -->
+                <source src="comic5-25269.mp3" type="audio/mpeg"> <!-- Panel audio sound file -->
                 Your browser does not support the audio element.
             </audio>
+
+            <!-- Audio element for door breaking sound -->
             <audio id="doorBreakAudio" preload="auto">
-                <source src="wood-break-40011-[AudioTrimmer.com].mp3" type="audio/mpeg"> <!-- Replace with your door break sound file -->
+                <source src="wood-break-40011-[AudioTrimmer.com].mp3" type="audio/mpeg"> <!-- Door break sound file -->
                 Your browser does not support the audio element.
             </audio>
+
+            <!-- Audio element for cartoon slap sound -->
             <audio id="cartoonSlapAudio" preload="auto">
-                <source src="cartoon-slap-sound.mp3" type="audio/mpeg"> <!-- Replace with your cartoon slap sound file -->
+                <source src="cartoon-slap-sound.mp3" type="audio/mpeg"> <!-- Cartoon slap sound file -->
                 Your browser does not support the audio element.
             </audio>
             
         </div>
     </main>
-   
 
-    <!-- JavaScript -->
+    <!-- JavaScript file linked for interactive functionality -->
     <script src="script.js"></script>
 </body>
 </html>
