@@ -103,13 +103,15 @@ body {
     background-color: #111;
     color: white;
     text-align: center;
-    height: 700px;
+    height: auto;
+    min-height: 100vh; /* Set min-height for proper content fit */
 }
 
 .about-section .about-text,
 .about-section .about-image {
-    max-width: 500px;
+    max-width: 100%;
     margin: 20px;
+    flex: 1;
 }
 
 .about-section .about-image img {
@@ -126,6 +128,50 @@ body {
 .about-text p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .about-section {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .about-section .about-text,
+    .about-section .about-image {
+        max-width: 50%;
+        margin: 20px 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-text h2 {
+        font-size: 2em;
+    }
+
+    .about-text p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 1.8em;
+    }
+
+    .about-text p {
+        font-size: 1em;
+    }
+    
+    .about-section .about-text,
+    .about-section .about-image {
+        max-width: 100%;
+        margin: 10px;
+    }
 }
 
 .comics-button {
@@ -267,7 +313,7 @@ p {
         width: 100%; /* Each author takes full width */
         max-width: 300px; /* Ensures author cards are not too wide */
     }
-    .authors-header {
+    .authors1-header {
         font-size: 2em;
         top: 10px;
     }
@@ -287,6 +333,7 @@ p {
     }
 }
 
+
 /* Extra small screens (phones) */
 @media (max-width: 576px) {
     .authors-section {
@@ -299,10 +346,7 @@ p {
         height: 100px;
         margin-left: 35%;
     }
-    .authors-header {
-        font-size: 1.8em;
-        top: 5px;
-    }
+   
 
     h3 {
         font-size: 1.1em;
@@ -319,29 +363,6 @@ p {
     }
 }
 
-/* Responsive Layout */
-@media (min-width: 768px) {
-    .about-section {
-        flex-direction: row;
-        text-align: left;
-    }
-
-    .about-text {
-        text-align: left;
-        flex: 1;
-    }
-
-    .about-image {
-        flex: 1;
-    }
-
-    .about-section .about-text,
-    .about-section .about-image {
-        margin: 20px 40px;
-    }
-    
-   
-}
 
 /* CTA Section for larger screens */
 .cta-section {
@@ -400,14 +421,35 @@ p {
     width: 100%;
     max-width: 400px; /* Ensure the buttons don't become too wide */
 }
+@media(max-width:768px){
+    .authors1-header {
+        position: relative; /* Allows the element to move relative to its normal position */
+        font-size: 3em;     /* Large font size for emphasis */
+        color: black;       /* Black text color */
+        text-align: center; /* Centers the header text */
+        margin-top: 0;      /* Ensures no extra margin on top */
+        margin-bottom: 20px; /* Adds space between the header and the content below */
+        padding-top: 20px;  /* Optional: Adds space at the top if needed */
+    }
+}
+ 
+.authors1-header {
+    position: relative;
+    font-size: 3em;
+    color: black;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
 
- .authors1-header{
+@media(min-width:767px){
+    .authors1-header{
         position: absolute;
         /* Positions the header at the top */
         font-size: 3em;
         color: black;
-        margin-top: -40%;
-    }
+        margin-top: -7%;}
+}
  @media  (min-width:1025px){
         .cta2-header{
             position: absolute;
@@ -418,6 +460,12 @@ p {
             margin-left: 40%;
         
         }
+        .authors1-header{
+            position: absolute;
+            /* Positions the header at the top */
+            font-size: 3em;
+            color: black;
+            margin-top: -40%;}
         .cta-images{
             margin-top: 20%;
         }
@@ -495,10 +543,11 @@ p {
 }
 
 main {
-    max-width: 800px;
+    max-width: 50%;
     margin: 40px auto;
     padding: 0 20px;
-    margin-top: 130px;
+    margin-top: 140px;
+  
 }
 
 .comic-container {
@@ -510,7 +559,7 @@ main {
     position: relative;
     height: 500px;
     z-index:55;
-   
+
 }
 
 .comic-display {
@@ -591,6 +640,30 @@ main {
         background-color: red;
     }
 }
+@media (min-width: 2560px) {
+    .comic-display {
+        width: 100%;  /* Full width */
+        height: 80vh; /* Adjust height to be responsive */
+        margin-left: 0; /* Center it horizontally */
+        display: flex;
+        justify-content: center;
+    }
+
+    .comic-page {
+        max-width: 100%;  /* Ensure it scales fully horizontally */
+        height: 80vh;     /* Responsive height to fit large screens */
+        object-fit: contain; /* Maintain aspect ratio */
+        margin: 0 auto;  /* Center it */
+    }
+
+    .nav-button {
+        font-size: 24px;  /* Increase font size for larger screens */
+        padding: 20px;    /* Larger padding for larger screens */
+        margin-top: -5%;  /* Adjust margin based on your layout */
+    }
+    
+}
+
 
 @media (max-width: 768px) {
     .comic-display {
@@ -726,7 +799,7 @@ main {
     background-color: #f0f0f0; /* Background color for the start page */
     text-align: center;
     z-index: 1;
-    width:
+    max-width: 100%;
 }
 
 .comic-cover {
@@ -749,6 +822,8 @@ main {
     font-size: 500px;
   }
 }
+    
+
 
 .start-button {
     padding: 15px 30px;
