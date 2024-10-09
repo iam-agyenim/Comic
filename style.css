@@ -726,13 +726,28 @@ main {
     background-color: #f0f0f0; /* Background color for the start page */
     text-align: center;
     z-index: 1;
+    width:
 }
 
 .comic-cover {
-    max-width: 400px; /* Adjust cover size as needed */
+    max-width: 700px; /* Adjust cover size as needed */
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+}
+@media(min-width:2560px){
+  .comic-cover{
+    max-width: 1400px;
+  }
+  .menu{
+    height: 200px;
+  }
+  .logo{
+    max-width: 100%;
+  }
+  .nav-links li a{
+    font-size: 500px;
+  }
 }
 
 .start-button {
