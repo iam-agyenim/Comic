@@ -85,7 +85,7 @@ body {
 
 .contain {
     background-image: url('Cover\ page.JPG');
-    height: 700px;
+    min-height: 100vh;
     width: 100%;
     margin-top: 75px;
     background-size: contain;
@@ -543,10 +543,15 @@ p {
 }
 
 main {
-    max-width: 50%;
-    margin: 40px auto;
+    max-width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 20px;
+    margin: 40px auto;
     margin-top: 140px;
+    
   
 }
 
@@ -555,7 +560,7 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     position: relative;
     height: 500px;
     z-index:55;
@@ -571,6 +576,7 @@ main {
     border: 2px solid black;
     box-shadow: 0 0 15px 5px red;
     z-index:55;
+   
 }
 
 .comic-page {
@@ -667,17 +673,20 @@ main {
 
 @media (max-width: 768px) {
     .comic-display {
-        width: 90%;
-        height: auto;
+        width: 100%;
+        height: 500px;
+       
     }
     .comic-page {
         width: 100%;
-        height: auto;
+        height: 500px;
     }
     .nav-button {
         font-size: 20px;
         padding: 15px;
-        margin-top: 70%;
+        margin-top: 42%;
+        width: 100px;
+        justify-self: center;
 
     }
     .prev, .next {
@@ -687,20 +696,51 @@ main {
     .nav-button:hover {
         background-color: red;
     }
-    
-}
-
-@media (max-width: 576px) {
-    .comic-page {
-        max-width:  100%;
-        height: auto;
+    #begin-btn {
+        position: relative;
+        left: 0%;
+        width: 100px;
     }
+    #end-btn{
+        width: 100px;
+       
+    }
+   
+}
+@media(min-width:768px){
+    #begin-btn {
+        position: relative;
+        left: 0%;
+        width: 100px;
+    }
+    #end-btn{
+        width: 100px;
+       
+    }
+}
+@media(min-width:1024px){
+    #begin-btn {
+        position: relative;
+        left: 0%;
+        width: 200px;
+    }
+    #end-btn{
+        width: 200px;
+       
+    }
+}
+@media (max-width: 576px) {
     .comic-display {
-        max-width: 100%;
-        height: auto ;
-        margin-left: 5%;
-        margin-bottom: 5%;
-        
+        width: 200px;
+        height: 300px;
+       right: 0%;
+       justify-self: center;
+       
+    }
+    .comic-page {
+        width: 200px;
+        height: 300px;
+        right: 0%;
     }
     .nav-button {
         position: absolute;
@@ -712,14 +752,11 @@ main {
         position: relative;
         left: 0%;
     }
+
    
     
 }
-@media (max-width: 768px) {
-    #timerVideo {
-        display: none !important;
-    }
-}
+
 
 
 #choice-container {
@@ -727,7 +764,8 @@ main {
     flex-direction: column; /* Stack buttons vertically */
     align-items: center; /* Center items horizontally */
     margin-top: 20px; /* Adjust as needed */
-    margin-left: 10%;
+    margin-left: 20%;
+    justify-content: center;
 }
 .choice-button {
     font-family: 'Arial', sans-serif;
@@ -763,15 +801,7 @@ main {
     margin-left: 0%;
     
 }
-#begin-btn {
-    margin-bottom: 10px; /* Space between buttons */
-   
-}
 
-#end-btn {
-    margin-top: 10px; /* Optional, if you want space above the end button */
- 
-}
 .choice-button:hover {
     background-color: #e5533c;
 }
