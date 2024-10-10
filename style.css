@@ -555,25 +555,23 @@ main {
   
 }
 
-.comic-container {
+.comics-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 1400px;
-    position: relative;
-    height: 500px;
-    z-index:55;
-
+    align-items: center;
+    gap: 20px;
+    max-width: 80%; /* Limit width of the content */
+    flex-wrap: wrap; /* This allows the buttons to wrap under the comic on smaller screens */
+    
 }
 
+
 .comic-display {
-    width: 100%;
-    background-color: #282828;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid black;
+    border-radius: 10%;
     box-shadow: 0 0 15px 5px red;
     z-index:55;
    
@@ -581,10 +579,9 @@ main {
 
 .comic-page {
     width: 100%;
-    height: 500px;
-    display: block;
-    margin: 0 auto; 
-    z-index:55;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10%;
    
 }
 .comic-container img {
@@ -596,17 +593,18 @@ main {
 }
 
 .nav-button {
-    background-color: red;
-    border: none;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 40px;
+    border: none;
     padding: 10px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background-color 0.3s;
 }
 
 .nav-button:hover {
@@ -638,64 +636,15 @@ main {
         display: flex;
        
     }
-    .nav-button {
-        font-size: 20px;
-        padding: 15px;
-    }
-    .nav-button:hover {
-        background-color: red;
-    }
+   
+   
 }
-@media (min-width: 2560px) {
-    .comic-display {
-        width: 100%;  /* Full width */
-        height: 80vh; /* Adjust height to be responsive */
-        margin-left: 0; /* Center it horizontally */
-        display: flex;
-        justify-content: center;
-    }
 
-    .comic-page {
-        max-width: 100%;  /* Ensure it scales fully horizontally */
-        height: 80vh;     /* Responsive height to fit large screens */
-        object-fit: contain; /* Maintain aspect ratio */
-        margin: 0 auto;  /* Center it */
-    }
 
-    .nav-button {
-        font-size: 24px;  /* Increase font size for larger screens */
-        padding: 20px;    /* Larger padding for larger screens */
-        margin-top: -5%;  /* Adjust margin based on your layout */
-    }
-    
-}
 
 
 @media (max-width: 768px) {
-    .comic-display {
-        width: 100%;
-        height: 500px;
-       
-    }
-    .comic-page {
-        width: 100%;
-        height: 500px;
-    }
-    .nav-button {
-        font-size: 20px;
-        padding: 15px;
-        margin-top: 42%;
-        width: 100px;
-        justify-self: center;
-
-    }
-    .prev, .next {
-        left: 0;
-        right: 0;
-    }
-    .nav-button:hover {
-        background-color: red;
-    }
+    
     #begin-btn {
         position: relative;
         left: 0%;
@@ -717,6 +666,7 @@ main {
         width: 100px;
        
     }
+    
 }
 @media(min-width:1024px){
     #begin-btn {
@@ -733,7 +683,7 @@ main {
     .comic-display {
         width: 200px;
         height: 300px;
-       right: 0%;
+       right: 5%;
        justify-self: center;
        
     }
@@ -743,20 +693,59 @@ main {
         right: 0%;
     }
     .nav-button {
-        position: absolute;
+        position: relative;
         padding: 10px;
+        justify-self: center;
         font-size: 18px;
-        margin-top: 50%;
+       
+        
     }
     #begin-btn {
         position: relative;
         left: 0%;
     }
+    #choiceA-btn{
+        margin-left: 0%;
+        width:200px;
+    }
+    
+    #choiceB-btn{
+        margin-left: 0%;
+        width:200px;
+    }
+    
 
    
     
 }
+/* Mobile first approach: On smaller screens, place next button below the comic */
+@media (max-width: 768px) {
+    .comics-container {
+        flex-direction: column; /* Stack comic and buttons vertically */
+    }
 
+    .nav-button {
+        font-size: 1.5rem;
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .nav-button.prev, .nav-button.next {
+        align-self: center;
+        margin-bottom: 10px; /* Add some space between the comic and buttons */
+    }
+}
+
+/* Adjusting for even smaller screens (e.g. phones) */
+@media (max-width: 480px) {
+    .nav-button {
+        font-size: 1.2rem;
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+    }
+}
 
 
 #choice-container {
@@ -764,8 +753,8 @@ main {
     flex-direction: column; /* Stack buttons vertically */
     align-items: center; /* Center items horizontally */
     margin-top: 20px; /* Adjust as needed */
-    margin-left: 20%;
     justify-content: center;
+    margin-left: 5%;
 }
 .choice-button {
     font-family: 'Arial', sans-serif;
@@ -786,7 +775,7 @@ main {
 }
 @media (max-width: 576px) {
     .choice-button1 {
-        width: 50%;
+        width: 20%;
         font-size: 14px; 
     }
    
