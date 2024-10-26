@@ -12,8 +12,7 @@ Delimma is an interactive comic that immerses readers in a story full of choices
 - **Engage with Us:** Links to Discord, Instagram, Webtoons, and TikTok for community engagement.
 
 ## Demo
-
-[Check out the comic]((https://iam-agyenim.github.io/Comic/)) directly in your browser.
+[Check out](https://iam-agyenim.github.io/Comic/index.html) directly in your browser.
 
 ## Technologies Used
 
