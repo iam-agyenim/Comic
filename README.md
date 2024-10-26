@@ -13,7 +13,7 @@ Delimma is an interactive comic that immerses readers in a story full of choices
 
 ## Demo
 
-[Check out the comic](displayC.html) directly in your browser.
+[Check out the comic]([displayC.html](https://iam-agyenim.github.io/Comic/)) directly in your browser.
 
 ## Technologies Used
 
